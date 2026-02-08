@@ -1,186 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SK SOLUTIONS | Computer & CCTV Services</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f6f9;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<title>SK SOLUTIONS | Computer & CCTV Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { margin:0; font-family:Arial, sans-serif; background:#f4f6f9; color:#333; }
 
-        /* HERO */
-        .hero {
-            height: 90vh;
-            background: url('banner.png') center/cover no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding-top: 60px;
-            animation: zoomFade 1.8s ease forwards;
-        }
+/* HERO */
+.hero {
+    height: 90vh;
+    background: url('banner.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+}
+.hero-overlay {
+    background: rgba(0,0,0,0.55);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+}
 
-        .hero-overlay {
-            background: rgba(0,0,0,0.55);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            animation: fadeInText 2.5s ease forwards;
-        }
+/* FLOATING BADGE */
+.quote-badge {
+    position: fixed; top:20px; right:20px;
+    background:#ff7a00; color:white;
+    width:95px; height:95px;
+    border-radius:50%;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    text-align:center; font-weight:bold;
+    font-size:11px; text-decoration:none;
+    box-shadow:0 6px 16px rgba(0,0,0,0.25);
+    animation:shake 2.5s infinite;
+    z-index:1000; padding:8px; line-height:1.2;
+}
+.quote-badge span { font-size:18px; margin-bottom:4px; }
 
-        @keyframes zoomFade {
-            from { opacity: 0; transform: scale(1.1); }
-            to { opacity: 1; transform: scale(1); }
-        }
+@keyframes shake {
+    0%{transform:rotate(0)}10%{transform:rotate(-6deg)}
+    20%{transform:rotate(6deg)}30%{transform:rotate(-6deg)}
+    40%{transform:rotate(6deg)}50%,100%{transform:rotate(0)}
+}
 
-        @keyframes fadeInText {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+header, footer { background:#0a3d62; color:white; text-align:center; padding:20px; }
+nav { background:#082c4a; text-align:center; padding:10px; }
+nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
+section { padding:40px 10%; }
 
-        /* FLOATING BADGE */
-        .quote-badge {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #ff7a00;
-            color: white;
-            width: 95px;
-            height: 95px;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-weight: bold;
-            font-size: 11px;
-            text-decoration: none;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-            animation: shake 2.5s infinite;
-            z-index: 1000;
-            padding: 8px;
-            line-height: 1.2;
-        }
+.services {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+.card {
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:0.3s;
+}
+.card:hover { transform:translateY(-5px); }
 
-        .quote-badge span {
-            font-size: 18px;
-            margin-bottom: 4px;
-        }
+/* POPUPS */
+.popup {
+    display:none;
+    position:fixed;
+    z-index:2000;
+    left:0; top:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.7);
+    justify-content:center;
+    align-items:center;
+}
+.popup-box {
+    background:white;
+    width:90%;
+    max-width:500px;
+    padding:25px;
+    border-radius:8px;
+    animation:fadeIn 0.3s ease;
+}
+.popup-box h2 { margin-top:0; color:#0a3d62; }
+.close-btn { float:right; font-size:20px; cursor:pointer; }
 
-        @keyframes shake {
-            0% { transform: rotate(0deg); }
-            10% { transform: rotate(-6deg); }
-            20% { transform: rotate(6deg); }
-            30% { transform: rotate(-6deg); }
-            40% { transform: rotate(6deg); }
-            50% { transform: rotate(0deg); }
-            100% { transform: rotate(0deg); }
-        }
+@keyframes fadeIn { from{transform:scale(0.8);opacity:0} to{transform:scale(1);opacity:1} }
 
-        header, footer {
-            background: #0a3d62;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        nav {
-            background: #082c4a;
-            text-align: center;
-            padding: 10px;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        section {
-            padding: 40px 10%;
-        }
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-
-        /* POPUP FORM */
-        .form-popup {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .form-box {
-            background: linear-gradient(145deg, #0a1a2f, #0f2c4a);
-            padding: 30px;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 10px;
-            text-align: center;
-            color: white;
-            animation: fadeIn 0.4s ease;
-        }
-
-        .form-box h2 {
-            color: #ff7a00;
-            margin-bottom: 20px;
-        }
-
-        .form-box input,
-        .form-box textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border-radius: 6px;
-            border: none;
-            background: #1c2b3a;
-            color: white;
-        }
-
-        .form-box button {
-            width: 100%;
-            padding: 12px;
-            background: #ff7a00;
-            border: none;
-            color: white;
-            font-weight: bold;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .close-btn {
-            float: right;
-            font-size: 22px;
-            cursor: pointer;
-        }
-
-        @keyframes fadeIn {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-    </style>
+/* FORM POPUP */
+.form-popup { display:none; position:fixed; z-index:2000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; }
+.form-box { background:linear-gradient(145deg,#0a1a2f,#0f2c4a); padding:30px; width:90%; max-width:500px; border-radius:10px; text-align:center; color:white; }
+.form-box h2 { color:#ff7a00; }
+.form-box input,.form-box textarea { width:100%; padding:12px; margin-bottom:15px; border-radius:6px; border:none; background:#1c2b3a; color:white; }
+.form-box button { width:100%; padding:12px; background:#ff7a00; border:none; color:white; font-weight:bold; border-radius:6px; cursor:pointer; }
+</style>
 </head>
 <body>
 
@@ -198,35 +113,35 @@
 <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
 </nav>
-
-<section id="about">
-    <h2>About Us</h2>
-    <p>We provide CCTV installation, computer and laptop services across Visakhapatnam.</p>
-</section>
 
 <section id="services">
     <h2>Our Services</h2>
     <div class="services">
-        <div class="card"><h3>Computer Services</h3></div>
-        <div class="card"><h3>Laptop Repairs</h3></div>
-        <div class="card"><h3>CCTV Installation</h3></div>
-        <div class="card"><h3>Maintenance</h3></div>
+        <div class="card" onclick="openPopup('computer')"><h3>💻 Computer Services</h3></div>
+        <div class="card" onclick="openPopup('laptop')"><h3>🖥 Laptop Repairs</h3></div>
+        <div class="card" onclick="openPopup('cctv')"><h3>📷 CCTV Installation</h3></div>
+        <div class="card" onclick="openPopup('maintenance')"><h3>🛠 Maintenance</h3></div>
     </div>
 </section>
 
-<footer>
-    <p>© 2026 SK SOLUTIONS</p>
-</footer>
+<footer><p>© 2026 SK SOLUTIONS</p></footer>
+
+<!-- SERVICE POPUPS -->
+<div id="computer" class="popup"><div class="popup-box"><span class="close-btn" onclick="closePopup('computer')">&times;</span><h2>Computer Services</h2><p>We provide OS installation, virus removal, hardware upgrades, and complete system troubleshooting.</p></div></div>
+
+<div id="laptop" class="popup"><div class="popup-box"><span class="close-btn" onclick="closePopup('laptop')">&times;</span><h2>Laptop Repairs</h2><p>Screen replacement, battery issues, motherboard repair, performance upgrades and more.</p></div></div>
+
+<div id="cctv" class="popup"><div class="popup-box"><span class="close-btn" onclick="closePopup('cctv')">&times;</span><h2>CCTV Installation</h2><p>Professional CCTV setup for homes, offices and shops with remote mobile viewing support.</p></div></div>
+
+<div id="maintenance" class="popup"><div class="popup-box"><span class="close-btn" onclick="closePopup('maintenance')">&times;</span><h2>Maintenance Services</h2><p>Annual maintenance contracts, regular servicing and emergency technical support.</p></div></div>
 
 <!-- FLOATING BADGE -->
 <a href="#" class="quote-badge" onclick="openForm(); return false;">
-    <span>📞</span>
-    Get Your<br>CCTV Quote
+    <span>📞</span>Get Your<br>CCTV Quote
 </a>
 
-<!-- POPUP FORM -->
+<!-- FORM POPUP -->
 <div id="quoteForm" class="form-popup">
     <div class="form-box">
         <span class="close-btn" onclick="closeForm()">&times;</span>
@@ -236,23 +151,18 @@
             <input type="tel" name="Mobile" placeholder="Enter your mobile number" required>
             <input type="email" name="Email" placeholder="Mail ID" required>
             <textarea name="Requirements" placeholder="Your Requirements"></textarea>
-
             <input type="hidden" name="_subject" value="New CCTV Quote Request - SK SOLUTIONS">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-
             <button type="submit">SUBMIT</button>
         </form>
     </div>
 </div>
 
 <script>
-function openForm() {
-    document.getElementById("quoteForm").style.display = "flex";
-}
-function closeForm() {
-    document.getElementById("quoteForm").style.display = "none";
-}
+function openPopup(id){ document.getElementById(id).style.display="flex"; }
+function closePopup(id){ document.getElementById(id).style.display="none"; }
+function openForm(){ document.getElementById("quoteForm").style.display="flex"; }
+function closeForm(){ document.getElementById("quoteForm").style.display="none"; }
 </script>
 
 </body>
