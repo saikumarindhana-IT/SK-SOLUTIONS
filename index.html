@@ -13,11 +13,45 @@
             color: #333;
         }
 
-        /* HERO BANNER */
-        .hero img {
-            width: 100%;
-            height: auto;
-            display: block;
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            height: 90vh;
+            background: url('banner.png') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: zoomFade 1.8s ease forwards;
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.55);
+            color: white;
+            text-align: center;
+            padding: 20px 30px;
+            border-radius: 8px;
+            animation: fadeInText 2.5s ease forwards;
+        }
+
+        .hero-overlay h1 {
+            margin: 0;
+            font-size: 42px;
+            letter-spacing: 2px;
+        }
+
+        .hero-overlay p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        @keyframes zoomFade {
+            from { opacity: 0; transform: scale(1.1); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         header {
@@ -26,37 +60,44 @@
             padding: 20px 10%;
             text-align: center;
         }
+
         nav {
             background: #082c4a;
             padding: 10px 10%;
             text-align: center;
         }
+
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
         }
+
         section {
             padding: 40px 10%;
         }
+
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
         }
+
         .card {
             background: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
+
         footer {
             background: #0a3d62;
             color: white;
             text-align: center;
             padding: 15px;
         }
+
         .btn {
             display: inline-block;
             margin: 8px 5px 0 0;
@@ -66,6 +107,7 @@
             border-radius: 5px;
             text-decoration: none;
         }
+
         .btn-whatsapp {
             background: #25D366;
         }
@@ -73,9 +115,12 @@
 </head>
 <body>
 
-<!-- TOP BANNER IMAGE -->
+<!-- HERO BANNER -->
 <section class="hero">
-    <img src="banner.png" alt="SK Solutions CCTV Services Banner">
+    <div class="hero-overlay">
+        <h1>SK SOLUTIONS</h1>
+        <p>Security & Computer Service Experts</p>
+    </div>
 </section>
 
 <header>
@@ -133,4 +178,3 @@
 
 </body>
 </html>
-
