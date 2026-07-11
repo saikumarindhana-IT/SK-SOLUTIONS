@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SK SOLUTIONS | Premium IT Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#06131f,#0f1f3d,#12284e,#1d3f72);
+color:#eef5ff}
+header{
+position:fixed;top:0;width:100%;z-index:1000;
+background:rgba(5,15,35,.55);
+backdrop-filter:blur(14px);
+padding:16px 7%;
+display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:28px;font-weight:700;background:linear-gradient(90deg,#58d5ff,#7f5cff,#00ffc8);-webkit-background-clip:text;color:transparent}
+nav a{color:#fff;text-decoration:none;margin-left:22px}
+.hero{
+min-height:100vh;
+display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 8% 60px;
+background:
+radial-gradient(circle at top right,#4f46e5 0,#0000 35%),
+radial-gradient(circle at bottom left,#06b6d4 0,#0000 30%),
+linear-gradient(135deg,#081421,#0f2242,#172f5b)}
+.hero h1{
+font-size:56px;max-width:900px;
+background:linear-gradient(90deg,#fff,#72ddff,#c4b5fd);
+-webkit-background-clip:text;color:transparent}
+.hero p{max-width:800px;margin:20px auto;font-size:18px;color:#d8e8ff}
+.btn{
+display:inline-block;padding:15px 30px;margin:10px;border-radius:40px;
+text-decoration:none;font-weight:600;
+background:linear-gradient(90deg,#2563eb,#7c3aed,#06b6d4);
+color:#fff;box-shadow:0 15px 35px rgba(0,0,0,.3)}
+.btn2{background:transparent;border:2px solid #66d9ff}
+section{padding:90px 8%}
+.title{text-align:center;font-size:40px;margin-bottom:50px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{
+background:rgba(255,255,255,.07);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,.12);
+padding:28px;border-radius:24px;
+transition:.35s}
+.card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 20px 45px rgba(0,0,0,.35)}
+.card h3{margin-bottom:12px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;text-align:center}
+.stat{
+padding:30px;border-radius:20px;
+background:linear-gradient(135deg,rgba(37,99,235,.25),rgba(124,58,237,.25))}
+.stat h2{font-size:42px}
+.testimonial{font-style:italic}
+.cta{
+text-align:center;
+padding:80px 8%;
+background:linear-gradient(135deg,#2563eb,#6d28d9,#0891b2)}
+footer{text-align:center;padding:35px;background:#050b17}
+.float{
+position:fixed;right:20px;bottom:20px;
+padding:15px 22px;border-radius:40px;
+background:linear-gradient(90deg,#22c55e,#16a34a);
+color:#fff;text-decoration:none;font-weight:700}
+@media(max-width:768px){
+.hero h1{font-size:36px}
+header{flex-direction:column;gap:12px}
+nav a{margin:0 10px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">SK SOLUTIONS</div>
+<nav>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>Transform Your Business with Smart Digital Solutions</h1>
+<p>Premium websites, enterprise dashboards, AI automation, CCTV surveillance, networking, and complete IT infrastructure solutions designed for modern businesses.</p>
+<a class="btn" href="#contact">Get Free Consultation</a>
+<a class="btn btn2" href="#services">Explore Services</a>
+</div>
+</section>
+
+<section>
+<h2 class="title">Trusted Technology Partner</h2>
+<div class="stats">
+<div class="stat"><h2>100+</h2><p>Projects</p></div>
+<div class="stat"><h2>50+</h2><p>Business Clients</p></div>
+<div class="stat"><h2>24/7</h2><p>Support</p></div>
+<div class="stat"><h2>99%</h2><p>Client Satisfaction</p></div>
+</div>
+</section>
+
+<section id="services">
+<h2 class="title">Our Premium Services</h2>
+<div class="grid">
+<div class="card"><h3>🌐 Website Development</h3><p>Corporate, portfolio, eCommerce and custom business websites with premium UI.</p></div>
+<div class="card"><h3>📊 Business Dashboards</h3><p>Sales, HR, Inventory, CRM and analytics dashboards.</p></div>
+<div class="card"><h3>🤖 AI Automation</h3><p>WhatsApp, Email, Lead management, AI Chatbots and workflow automation.</p></div>
+<div class="card"><h3>📷 CCTV Solutions</h3><p>Professional HD/IP CCTV installation with remote monitoring.</p></div>
+<div class="card"><h3>💻 Computer & Laptop</h3><p>Repair, upgrades, maintenance and annual support contracts.</p></div>
+<div class="card"><h3>☁ Cloud & Networking</h3><p>Server setup, Wi-Fi, LAN, backups and cloud migration.</p></div>
+</div>
+</section>
+
+<section id="portfolio">
+<h2 class="title">Featured Solutions</h2>
+<div class="grid">
+<div class="card"><h3>Hospital Management</h3><p>Patient dashboard, appointments, billing and reports.</p></div>
+<div class="card"><h3>School ERP</h3><p>Student, staff, attendance and fee management.</p></div>
+<div class="card"><h3>Retail Dashboard</h3><p>Inventory, billing and sales analytics.</p></div>
+<div class="card"><h3>Company Website</h3><p>Modern responsive website with SEO optimization.</p></div>
+</div>
+</section>
+
+<section id="about">
+<h2 class="title">Why SK SOLUTIONS?</h2>
+<div class="grid">
+<div class="card"><h3>Innovation</h3><p>Modern technologies and scalable architecture.</p></div>
+<div class="card"><h3>Quality</h3><p>Premium UI/UX and reliable implementation.</p></div>
+<div class="card"><h3>Support</h3><p>Fast response and long-term customer support.</p></div>
+<div class="card testimonial"><strong>"Professional service and outstanding support."</strong><br>★★★★★</div>
+</div>
+</section>
+
+<section class="cta" id="contact">
+<h2 style="font-size:42px">Let's Build Something Amazing</h2>
+<p style="margin:20px 0">Need a website, dashboard, AI automation or CCTV solution? Contact us today.</p>
+<p><strong>📞 7801080912</strong></p>
+<p><strong>📧 sksltns@gmail.com</strong></p>
+<a class="btn" href="tel:7801080912">Call Now</a>
+</section>
+
+<footer>
+© 2026 SK SOLUTIONS • Premium IT Solutions • Visakhapatnam
+</footer>
+
+<a class="float" href="https://wa.me/917801080912">WhatsApp Us</a>
+
+</body>
+</html>
